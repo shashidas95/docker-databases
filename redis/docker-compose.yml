@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  redis:
+    container_name: my_redis
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 6379:6379
+    environment:
+      REDIS_PASSWORD: mysecretpassword
+      REDIS_MAXMEMORY: 256mb
+      REDIS_APPENDONLY: 'yes'
+      REDIS_SAVE: '900 1 300 10 60 10000'
+    volumes:
+      - ./myredis:/usr/local/etc/redis
