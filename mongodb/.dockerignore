@@ -1,0 +1,23 @@
+# Ignore Git files
+.git
+.gitignore
+
+# Ignore environment variable files
+.env
+
+# Ignore mydata data directory
+my-data/
+/database
+# Ignore node modules
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore temporary files
+*.tmp
+*.bak
